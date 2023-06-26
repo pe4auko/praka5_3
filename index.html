@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        background-color: #2a2a2a;
+        color: #b3b5b6;
+        font-size: large;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      ul{
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    const constants = [
+{ text: "Значення константи π", num: Math.PI },
+      { text: "Значення константи е", num: Math.E },
+      {
+        text: "Десятковий логарифм постійної Ейлера (е)",
+        num: Math.log10(Math.E),
+      },
+      { text: "Корінь квадратний з однієї другої", num: Math.sqrt(1 / 2) },
+      { text: "Натуральний логарифм числа 10", num: Math.log(10) },
+      { text: "Натуральний логарифм числа 2", num: Math.log(2) },
+      { text: "Корінь квадратний із двох ", num: Math.sqrt(2) },
+{
+        text: "Двійковий логарифм постійної Ейлера (е)",
+        num: Math.log2(Math.E),
+      },
+      
+    ];
+    const funcs = [
+      {
+        text: "Результат обчислення арктангенса одиниці",
+        num: Math.atan(1),
+      },
+      {
+        text: "Результат зведення е в степінь 2",
+        num: Math.exp(2),
+      },
+      {
+        text: "Натуральний логарифм від e2",
+        num: Math.log(Math.exp(2)),
+      },
+      {
+        text: "Результат обчислення десяткового логарифма від числа 100",
+        num: Math.log10(100),
+      },
+      {
+        text: "Результат обчислення двійкового логарифма від числа 8",
+        num: Math.log2(8),
+      },
+    ];
+    const random =  [
+      {
+        text: "Випадкове число в інтервалі [0;1]",
+        num: Math.random(),
+      },
+    ];
+
+    const ul1 = document.createElement("ul");
+    const ul2 = document.createElement("ul");
+    const ul3 = document.createElement("ul");
+
+    constants.forEach((el) => {
+      const li = document.createElement("li");
+      li.textContent = `${el.text} = ${el.num}`;
+      ul1.appendChild(li);
+    });
+    document.body.appendChild(ul1);
+
+    funcs.forEach((el) => {
+      const li = document.createElement("li");
+      li.textContent = `${el.text}: y = ${el.num}`;
+      ul2.appendChild(li);
+    });
+    document.body.appendChild(ul2);
+
+    random.forEach((el) => {
+      const li = document.createElement("li");
+      li.textContent = `${el.text}: y = ${el.num}`;
+      ul3.appendChild(li);
+    });
+    document.body.appendChild(ul3);
+  </script>
+</html>
